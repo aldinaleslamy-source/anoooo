@@ -1,0 +1,46 @@
+/* Global styles + design tokens */
+:root{
+  --bg: #F8F6F2;
+  --panel: #EFECE7;
+  --text: #212121;
+  --accent: #BFA76B;
+  --muted: rgba(33,33,33,0.6);
+  --container: 1200px;
+}
+html,body{
+  padding:0;margin:0;height:100%;
+  font-family: 'Cairo', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--container);margin:0 auto;padding:16px}
+.topbar{background:transparent;padding:12px 0}
+.nav-inner{display:flex;align-items:center;gap:16px}
+.logo img{height:36px}
+.search input{padding:10px 14px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:#fff;width:420px}
+.icons a{margin-left:12px;text-decoration:none}
+.page-title{font-size:24px;margin:8px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.card .img{height:320px;background:#f6f4f0;display:flex;align-items:center;justify-content:center}
+.card img{width:100%;height:100%;object-fit:cover}
+.card .body{padding:12px}
+.title{font-weight:600;margin:0 0 6px;font-size:15px}
+.price{font-size:16px;color:var(--text);font-weight:700}
+.old{font-size:13px;color:var(--muted);text-decoration:line-through;margin-left:8px;font-weight:400}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:13px;color:var(--muted)}
+.site-footer{padding:24px 0;text-align:center;color:var(--muted)}
+.product-page .product-grid{display:grid;grid-template-columns:55% 45%;gap:24px;align-items:start}
+.product-page .gallery img{width:100%;border-radius:8px}
+.details h1{margin:0;font-family:'Playfair Display', serif;font-size:28px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;border:none;cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.outline{background:transparent;border:1px solid rgba(0,0,0,0.08)}
+.cart-item{display:flex;gap:12px;align-items:center;padding:8px 0}
+.checkout-form input{display:block;width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid rgba(0,0,0,0.08)}
+@media (max-width:767px){
+  .product-page .product-grid{grid-template-columns:1fr}
+  .search input{width:100%}
+}
